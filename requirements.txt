@@ -1,0 +1,11 @@
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+xgboost==3.2.0
+shap>=0.45
+matplotlib>=3.8
+networkx>=3.2
+jax==0.6.2
+jaxlib==0.6.2
+rdatasets>=0.2
