@@ -1,0 +1,34 @@
+{
+  "n_seeds": 10,
+  "GATv2_R2_mean": 0.4031939685344696,
+  "GATv2_R2_std": 0.05173014680386869,
+  "MLP_R2_mean": 0.3096148014068604,
+  "MLP_R2_std": 0.09839003208798439,
+  "dR2_mean": 0.09357916712760925,
+  "dR2_std": 0.08485049212278106,
+  "wilcoxon_W": 52.0,
+  "wilcoxon_p": 0.0048828125,
+  "graph": {
+    "n_nodes": 300,
+    "n_edges": 225,
+    "n_phases": 6,
+    "is_dag": true
+  },
+  "target_upstream_variance_share": 0.5802834837916097,
+  "gamma": 0.9,
+  "gat_params": 5217,
+  "mlp_params": 2625,
+  "hyperparams": {
+    "hidden": 32,
+    "heads": 2,
+    "dropout": 0.3,
+    "epochs_max": 500,
+    "lr": 0.005,
+    "patience": 40,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0
+  },
+  "env": {
+    "jax": "0.6.2"
+  }
+}

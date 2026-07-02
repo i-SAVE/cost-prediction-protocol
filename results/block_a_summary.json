@@ -1,0 +1,180 @@
+{
+  "dataset": {
+    "name": "Ames Housing (De Cock 2011; openintro via rdatasets)",
+    "n": 2930,
+    "n_train": 2344,
+    "n_test": 586,
+    "num_feats": 36,
+    "cat_feats": 43,
+    "n_features_after_prep": 274
+  },
+  "baselines_cv": [
+    {
+      "Model": "Dummy (mean)",
+      "CV_RMSE_log": 0.4071123796103466,
+      "CV_RMSE_log_std": 0.013473750812876193,
+      "CV_R2": -0.0010784263869724863,
+      "CV_R2_std": 0.0011865491646727213
+    },
+    {
+      "Model": "LinearRegression",
+      "CV_RMSE_log": 0.13221854664110552,
+      "CV_RMSE_log_std": 0.01247571998959611,
+      "CV_R2": 0.8922769783285295,
+      "CV_R2_std": 0.025843492337741993
+    },
+    {
+      "Model": "Ridge",
+      "CV_RMSE_log": 0.12862144512712292,
+      "CV_RMSE_log_std": 0.010947899881945763,
+      "CV_R2": 0.8983181330904438,
+      "CV_R2_std": 0.02282139128702122
+    }
+  ],
+  "xgb_best_params": {
+    "subsample": 0.95,
+    "reg_lambda": 0.8,
+    "reg_alpha": 0.02,
+    "n_estimators": 1200,
+    "min_child_weight": 1,
+    "max_depth": 5,
+    "learning_rate": 0.02,
+    "gamma": 0.0,
+    "colsample_bytree": 0.7
+  },
+  "xgb_best_cv_rmse_log": 0.11790123996426594,
+  "xgb_tuning_time_s": 90.4,
+  "xgb_test": {
+    "MAE": 13493.680434087024,
+    "RMSE": 22280.644790147602,
+    "R2": 0.9283017058635261,
+    "MAPE": 7.785759937977915
+  },
+  "wilcoxon": {
+    "W": 81665.0,
+    "p": 0.1454491808466854,
+    "n": 586
+  },
+  "test_comparison_A": [
+    {
+      "Model": "Dummy (mean)",
+      "R2": -0.0378,
+      "R2_lo": -0.0656,
+      "R2_hi": -0.016,
+      "RMSE": 84768,
+      "RMSE_lo": 75723,
+      "RMSE_hi": 93779,
+      "MAE": 58089,
+      "MAPE": 32.84,
+      "fit_time_s": 0.0
+    },
+    {
+      "Model": "LinearRegression",
+      "R2": 0.8784,
+      "R2_lo": 0.745,
+      "R2_hi": 0.9447,
+      "RMSE": 29021,
+      "RMSE_lo": 19457,
+      "RMSE_hi": 40822,
+      "MAE": 14344,
+      "MAPE": 8.42,
+      "fit_time_s": 0.05
+    },
+    {
+      "Model": "Ridge",
+      "R2": 0.8823,
+      "R2_lo": 0.7533,
+      "R2_hi": 0.9463,
+      "RMSE": 28548,
+      "RMSE_lo": 19135,
+      "RMSE_hi": 40025,
+      "MAE": 14147,
+      "MAPE": 8.29,
+      "fit_time_s": 0.03
+    },
+    {
+      "Model": "RandomForest",
+      "R2": 0.8951,
+      "R2_lo": 0.8577,
+      "R2_hi": 0.9235,
+      "RMSE": 26951,
+      "RMSE_lo": 22749,
+      "RMSE_hi": 31205,
+      "MAE": 16749,
+      "MAPE": 9.67,
+      "fit_time_s": 2.31
+    },
+    {
+      "Model": "GradientBoosting",
+      "R2": 0.929,
+      "R2_lo": 0.904,
+      "R2_hi": 0.9476,
+      "RMSE": 22170,
+      "RMSE_lo": 18882,
+      "RMSE_hi": 25328,
+      "MAE": 13785,
+      "MAPE": 8.06,
+      "fit_time_s": 8.08
+    },
+    {
+      "Model": "XGBoost (tuned)",
+      "R2": 0.9283,
+      "R2_lo": 0.9034,
+      "R2_hi": 0.9473,
+      "RMSE": 22280,
+      "RMSE_lo": 18932,
+      "RMSE_hi": 25560,
+      "MAE": 13493,
+      "MAPE": 7.79,
+      "fit_time_s": 1.34
+    }
+  ],
+  "shap_top20": {
+    "Overall.Qual": 0.1246,
+    "area": 0.0762,
+    "Year.Built": 0.0366,
+    "Year.Remod.Add": 0.0252,
+    "BsmtFin.SF.1": 0.0252,
+    "X1st.Flr.SF": 0.0231,
+    "Total.Bsmt.SF": 0.022,
+    "Garage.Cars": 0.0189,
+    "Fireplaces": 0.0187,
+    "Lot.Area": 0.0186,
+    "Overall.Cond": 0.0167,
+    "Garage.Area": 0.0116,
+    "X2nd.Flr.SF": 0.0094,
+    "Central.Air_N": 0.0087,
+    "Sale.Condition_Abnorml": 0.0076,
+    "Kitchen.Qual_TA": 0.0066,
+    "Bsmt.Full.Bath": 0.0062,
+    "MS.Zoning_RM": 0.0055,
+    "Bsmt.Qual_Ex": 0.0053,
+    "MS.Zoning_RL": 0.0051
+  },
+  "oof": {
+    "oof_err_mean": 13362.299441741798,
+    "cv_r2": 0.185121737487249,
+    "imp_top10": {
+      "area": 0.2211,
+      "Total.Bsmt.SF": 0.12,
+      "Lot.Area": 0.1061,
+      "BsmtFin.SF.1": 0.0876,
+      "X2nd.Flr.SF": 0.0746,
+      "Bsmt.Unf.SF": 0.0524,
+      "Garage.Area": 0.0384,
+      "Overall.Qual": 0.037,
+      "Year.Remod.Add": 0.0276,
+      "X1st.Flr.SF": 0.0239
+    }
+  },
+  "seed": 42,
+  "n_boot": 2000,
+  "env": {
+    "python": "3.10.12",
+    "sklearn": "1.7.2",
+    "xgboost": "3.2.0",
+    "shap": "0.49.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

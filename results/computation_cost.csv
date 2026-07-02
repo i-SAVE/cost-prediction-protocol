@@ -1,0 +1,7 @@
+Algorithm,Fit_time_s
+Dummy (mean),0.0
+LinearRegression,0.05
+Ridge,0.03
+RandomForest,2.31
+GradientBoosting,8.08
+XGBoost (tuned),1.34
